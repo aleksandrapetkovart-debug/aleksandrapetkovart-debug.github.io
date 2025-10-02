@@ -24,7 +24,7 @@
 
 
 <body>
-  <h4 style="color: #D70040; font-family:'Courier New'; text-align:center; ">SEE POSTER THROUGH CAMERA</h4>
+  <h4 id="title" style="color: #D70040; font-family:'Courier New'; text-align:center; ">SEE POSTER THROUGH CAMERA</h4>
   <a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB"
     renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
@@ -70,10 +70,16 @@
       videoEl.currentTime = 0;
     });
   </script>
+  <script>
+    setTimeout(() => {
+      document.getElementById("title").style.display = "none";
+    }, 5000);
+  </script>
 </body>
 
 
 </html>
+
 
 
 
